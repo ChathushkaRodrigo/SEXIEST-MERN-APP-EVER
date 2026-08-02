@@ -22,7 +22,7 @@ app.use(postsRoutes);
 
 const PORT = 8000;
 
-const DB_URL  = 'mongodb+srv://Chathushka:chathu123@mernapp.qbwjq.mongodb.net/mernCRUD?retryWrites=true&w=majority';
+const DB_URL = process.env.DB_URL;
 
 mongoose.connect(DB_URL,{ useNewUrlParser: true ,useUnifiedTopology: true} ).then(()=>{
     console.log("DB connected");
